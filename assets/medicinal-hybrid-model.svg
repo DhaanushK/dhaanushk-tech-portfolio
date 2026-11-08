@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Medicinal plant image classifier workflow</title>
+  <desc id="desc">A plant image is processed by parallel Vision Transformer and CNN branches. A learned fusion layer returns three top class predictions.</desc>
+  <rect width="1200" height="800" fill="#F4EBDD"/>
+  <path d="M0 0h1200v17H0z" fill="#5B1728"/>
+  <text x="64" y="82" fill="#812B3B" font-family="monospace" font-size="17" letter-spacing="4">COMPUTER VISION · MODEL WORKFLOW</text>
+  <text x="64" y="150" fill="#242124" font-family="Georgia,serif" font-size="52">Medicinal Plant</text>
+  <text x="64" y="211" fill="#5B1728" font-family="Georgia,serif" font-size="52" font-style="italic">Image Classification</text>
+  <text x="64" y="255" fill="#655B5C" font-family="Arial,sans-serif" font-size="20">Two image-model branches combine to score plant classes.</text>
+
+  <text x="64" y="337" fill="#812B3B" font-family="monospace" font-size="15" letter-spacing="2">INPUT IMAGE</text>
+  <rect x="64" y="362" width="220" height="250" fill="#E8D8C5" stroke="#C6A15B" stroke-width="2"/>
+  <path d="M174 550c-7-78 4-124 0-164" fill="none" stroke="#3B101C" stroke-width="7" stroke-linecap="round"/>
+  <path d="M174 470c-52-52-83-42-87-70 36-18 75 3 87 70Z" fill="#5B1728"/>
+  <path d="M176 431c13-51 53-68 76-54-4 36-35 62-76 54Z" fill="#812B3B"/>
+  <path d="M171 508c-9-48-44-66-68-53 5 33 32 55 68 53Z" fill="#812B3B"/>
+  <path d="M180 487c25-42 62-45 79-27-15 29-46 40-79 27Z" fill="#5B1728"/>
+  <text x="174" y="584" text-anchor="middle" fill="#3B101C" font-family="monospace" font-size="15" letter-spacing="2">RGB PLANT PHOTO</text>
+
+  <path d="M306 487h49m-14-14 14 14-14 14" fill="none" stroke="#C6A15B" stroke-width="4"/>
+  <text x="397" y="337" fill="#812B3B" font-family="monospace" font-size="15" letter-spacing="2">PARALLEL MODEL BRANCHES</text>
+  <rect x="382" y="364" width="342" height="104" fill="#fffaf2" stroke="#812B3B" stroke-width="2"/>
+  <text x="414" y="409" fill="#5B1728" font-family="Georgia,serif" font-size="32">Vision Transformer</text>
+  <text x="414" y="443" fill="#655B5C" font-family="monospace" font-size="14" letter-spacing="2">PRETRAINED ViT</text>
+  <rect x="382" y="500" width="342" height="104" fill="#fffaf2" stroke="#812B3B" stroke-width="2"/>
+  <text x="414" y="545" fill="#5B1728" font-family="Georgia,serif" font-size="32">Convolutional CNN</text>
+  <text x="414" y="579" fill="#655B5C" font-family="monospace" font-size="14" letter-spacing="2">VISUAL FEATURE BRANCH</text>
+
+  <path d="M744 416h70M744 552h70M800 416v136m0-68h42m-14-14 14 14-14 14" fill="none" stroke="#C6A15B" stroke-width="4"/>
+  <rect x="855" y="431" width="265" height="138" fill="#3B101C"/>
+  <text x="987" y="478" text-anchor="middle" fill="#F8F2E8" font-family="monospace" font-size="15" letter-spacing="2">LEARNED</text>
+  <text x="987" y="513" text-anchor="middle" fill="#F8F2E8" font-family="Georgia,serif" font-size="29">Fusion layer</text>
+  <text x="987" y="544" text-anchor="middle" fill="#E4CBB1" font-family="Arial,sans-serif" font-size="16">combined class scores</text>
+
+  <path d="M987 580v57m0 0H203m784 0v19m-784-19v19" fill="none" stroke="#C6A15B" stroke-width="3"/>
+  <path d="M203 656h918" stroke="#E8D8C5" stroke-width="2"/>
+  <text x="64" y="710" fill="#812B3B" font-family="monospace" font-size="14" letter-spacing="2">TRAINING WORKFLOW</text>
+  <text x="64" y="751" fill="#242124" font-family="Arial,sans-serif" font-size="19">Augmentation</text>
+  <circle cx="244" cy="744" r="4" fill="#C6A15B"/>
+  <text x="265" y="751" fill="#242124" font-family="Arial,sans-serif" font-size="19">Class-weighted loss</text>
+  <circle cx="493" cy="744" r="4" fill="#C6A15B"/>
+  <text x="514" y="751" fill="#242124" font-family="Arial,sans-serif" font-size="19">Early stopping</text>
+  <text x="1120" y="710" text-anchor="end" fill="#812B3B" font-family="monospace" font-size="14" letter-spacing="2">OUTPUT</text>
+  <text x="1120" y="751" text-anchor="end" fill="#5B1728" font-family="Georgia,serif" font-size="27">Top 3 classes</text>
+</svg>

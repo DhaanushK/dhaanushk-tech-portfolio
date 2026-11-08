@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F8F2E8">
+  <meta name="description" content="Explore Wine Oracle, a hybrid MC-CNN and MLP wine quality classifier, and try a sample prediction.">
+  <title>Wine Oracle | Dhaanush K.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="wine-oracle.css">
+</head>
+<body>
+  <header class="case-header">
+    <a class="back-link" href="../../index.html#projects"><span>←</span> ALL PROJECTS</a>
+    <a class="case-github" href="https://github.com/DhaanushK/Wine-Quality-Prediction" target="_blank" rel="noopener noreferrer">SOURCE REPOSITORY <span>↗</span></a>
+  </header>
+  <main>
+    <section class="case-hero">
+      <p class="eyebrow"><span></span> CASE STUDY 01 · PREDICTIVE MODELING</p>
+      <h1>Wine Oracle:<br><em>Quality Prediction with Neural Alchemy</em></h1>
+      <p class="case-lede">A hybrid MC-CNN and MLP classifier estimates wine quality from 11 physicochemical measurements. The project combines preprocessing, model training, and a sample-input prediction experience.</p>
+      <div class="case-hero-actions">
+        <a class="case-button" href="#try-it">Try a prediction <span>↓</span></a>
+        <a class="case-button secondary" href="https://github.com/DhaanushK/Wine-Quality-Prediction" target="_blank" rel="noopener noreferrer">Explore the code <span>↗</span></a>
+        <a class="case-button secondary" href="https://doi.org/10.46632/jdaai/3/2/13" target="_blank" rel="noopener noreferrer">Read the publication <span>↗</span></a>
+      </div>
+      <div class="case-meta">
+        <span><b>ROLE</b>Co-author · Co-Developer · Model development</span>
+        <span><b>DATA</b>14,852 rows in the bundled red and white datasets</span>
+        <span><b>INPUTS</b>11 physicochemical features</span>
+        <span><b>MODEL</b>MC-CNN + MLP</span>
+      </div>
+    </section>
+    <div class="case-content">
+      <section class="case-summary">
+        <p class="eyebrow"><span></span> AT A GLANCE</p>
+        <div>
+          <h2>Estimate a quality class from lab measurements.</h2>
+          <p>Wine Oracle accepts red or white wine measurements and returns the model's predicted quality class with its top-class probability. The demo follows the preprocessing and inference steps from the project repository.</p>
+          <p>The paper reports 87.6% accuracy for red wine and 90.0% for white wine. In the latest repository run, the combined MC-CNN and MLP model scored 87.41% on red wine and 90.58% on white wine. Local scores can vary slightly because the CNN initialization is not seeded.</p>
+        </div>
+      </section>
+      <section class="case-section">
+        <div><span class="section-number">01 / APPROACH</span><h2>Two model paths, one prediction.</h2></div>
+        <div class="case-section-content">
+          <p>The MC-CNN processes two channels formed from the scaled measurements. In parallel, an MLP estimates class probabilities. The combined model receives both outputs and predicts a wine quality class. The browser predictor applies the saved transforms, feature engineering, and scaler before either model runs.</p>
+          <div class="stack-lines">
+            <div><b>INPUT</b><span>11 physicochemical measurements and red or white wine selection</span></div>
+            <div><b>PREPROCESSING</b><span>Wine-specific raw-value transform, engineered alcohol-sulphate interaction, and saved standard scaler</span></div>
+            <div><b>OUTPUT</b><span>Predicted class and probability assigned to that class</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div><span class="section-number">02 / INTERPRETATION</span><h2>A model estimate, not a tasting.</h2></div>
+        <div class="case-section-content">
+          <p>The probability shown is the model's score for its top predicted class. It is not a calibrated measure of real-world certainty. The higher or lower label is a project-defined grouping using a predicted class cutoff of 6.</p>
+          <p>This demo estimates the dataset's quality label from lab measurements. It does not assess contamination, spoilage, safety, preference, or commercial value.</p>
+        </div>
+      </section>
+      <section class="wo-demo" id="try-it" aria-labelledby="wo-demo-title">
+        <p class="eyebrow"><span></span> TRY IT YOURSELF</p>
+        <h2 id="wo-demo-title">Enter a sample. See the model output.</h2>
+        <p class="wo-intro">Choose a wine type, enter all 11 lab measurements in the units shown, or load an example sample to explore the predictor. The model runs in your browser. Your input values are not sent to a prediction server.</p>
+        <form class="wo-form" id="wine-predict-form">
+          <div class="wo-form-top">
+            <label class="wo-wine-select" for="wo-wine-type">Wine type
+              <select id="wo-wine-type" name="wine_type">
+                <option value="red">Red</option>
+                <option value="white">White</option>
+              </select>
+            </label>
+            <div class="wo-form-options">
+              <button class="wo-button wo-button--outline" id="wo-example" type="button">Load example values</button>
+              <button class="wo-button wo-button--outline" id="wo-clear" type="button">Clear values</button>
+            </div>
+          </div>
+          <div class="wo-fields" id="wo-fields">
+            <label class="wo-field" for="wo-fixed-acidity"><span>Fixed acidity <small>g/dm³</small></span><input id="wo-fixed-acidity" name="fixed acidity" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-volatile-acidity"><span>Volatile acidity <small>g/dm³</small></span><input id="wo-volatile-acidity" name="volatile acidity" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-citric-acid"><span>Citric acid <small>g/dm³</small></span><input id="wo-citric-acid" name="citric acid" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-residual-sugar"><span>Residual sugar <small>g/dm³</small></span><input id="wo-residual-sugar" name="residual sugar" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-chlorides"><span>Chlorides <small>g/dm³</small></span><input id="wo-chlorides" name="chlorides" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-free-sulfur"><span>Free sulfur dioxide <small>mg/dm³</small></span><input id="wo-free-sulfur" name="free sulfur dioxide" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-total-sulfur"><span>Total sulfur dioxide <small>mg/dm³</small></span><input id="wo-total-sulfur" name="total sulfur dioxide" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-density"><span>Density <small>g/cm³</small></span><input id="wo-density" name="density" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-ph"><span>pH</span><input id="wo-ph" name="pH" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-sulphates"><span>Sulphates <small>g/dm³</small></span><input id="wo-sulphates" name="sulphates" type="number" step="any" required></label>
+            <label class="wo-field" for="wo-alcohol"><span>Alcohol <small>% vol.</small></span><input id="wo-alcohol" name="alcohol" type="number" step="any" required></label>
+          </div>
+          <div class="wo-form-actions">
+            <button class="wo-button" id="wo-submit" type="submit">Predict quality <span aria-hidden="true">↗</span></button>
+            <p class="wo-status" id="wo-status" role="status" aria-live="polite">Enter measurements or load an example to begin.</p>
+          </div>
+        </form>
+        <section class="wo-result" id="wo-result" aria-labelledby="wo-result-title" aria-live="polite" aria-atomic="true" hidden>
+          <p class="wo-result-label">MODEL ESTIMATE</p>
+          <h3 id="wo-result-title">Predicted sensory quality rating: <span id="wo-quality"></span><small> / 10</small></h3>
+          <div class="wo-result-meta">
+            <span><strong>Quality group</strong><span id="wo-tier"></span></span>
+            <span><strong id="wo-probability-label">Model probability for this rating</strong><b id="wo-probability"></b></span>
+          </div>
+          <p class="wo-result-explanation" id="wo-rating-meaning"></p>
+        </section>
+        <p class="wo-caveat">Quality estimate only. This model does not test for contamination, spoilage, or whether a wine is safe to drink. Example values are sample inputs, not recommendations.</p>
+      </section>
+      <section class="wo-publication">
+        <div><p class="eyebrow"><span></span> RESEARCH &amp; PUBLICATION · 2024</p><h2>Wine Oracle: A Clandestine Journey into Quality Prediction with Neural Alchemy</h2><p>Co-authored paper in REST Journal on Data Analytics and Artificial Intelligence, Volume 3, Issue 2. DOI: 10.46632/jdaai/3/2/13.</p></div>
+        <a class="wo-button wo-button--light" href="https://doi.org/10.46632/jdaai/3/2/13" target="_blank" rel="noopener noreferrer">Read the publication <span aria-hidden="true">↗</span></a>
+      </section>
+    </div>
+  </main>
+  <footer class="case-footer"><a href="../../index.html">DHAANUSH K.</a><a href="../medicinal-plant/index.html">NEXT CASE →</a><span>WINE ORACLE</span><a href="../../index.html#projects">ALL PROJECTS ↑</a></footer>
+  <script src="demo/example-samples.js"></script>
+  <script src="wine-oracle.js"></script>
+</body>
+</html>

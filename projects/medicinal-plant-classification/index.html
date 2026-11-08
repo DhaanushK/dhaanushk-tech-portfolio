@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#F8F2E8">
+  <meta name="description" content="A hybrid Vision Transformer and CNN medicinal plant image classifier with a live interactive demo.">
+  <title>Medicinal Plant Image Classification | Dhaanush K.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="case-header">
+    <a class="back-link" href="../../index.html#projects"><span>←</span> ALL PROJECTS</a>
+    <a class="case-github" href="https://github.com/DhaanushK/Medicinal-Plant-Classification" target="_blank" rel="noopener noreferrer">SOURCE REPOSITORY <span>↗</span></a>
+  </header>
+  <main>
+    <section class="case-hero">
+      <p class="eyebrow"><span></span> CASE STUDY · COMPUTER VISION</p>
+      <h1>Medicinal Plant<br><em>Image Classification</em></h1>
+      <p class="case-lede">A hybrid image classifier that combines a pretrained Vision Transformer with a convolutional neural network. Upload a plant image to explore the model’s top class predictions.</p>
+      <div class="case-hero-actions">
+        <a class="case-button" href="#try-it">Try the classifier <span>↓</span></a>
+        <a class="case-button secondary" href="https://github.com/DhaanushK/Medicinal-Plant-Classification" target="_blank" rel="noopener noreferrer">Explore the code <span>↗</span></a>
+      </div>
+      <div class="case-meta">
+        <span><b>DOMAIN</b>Deep learning &amp; computer vision</span>
+        <span><b>MODEL</b>Vision Transformer + CNN fusion</span>
+        <span><b>INPUT</b>JPG or PNG plant image</span>
+        <span><b>OUTPUT</b>Top three class predictions</span>
+      </div>
+    </section>
+    <div class="case-content">
+      <section class="case-summary">
+        <p class="eyebrow"><span></span> AT A GLANCE</p>
+        <div>
+          <h2>Two visual branches, one prediction.</h2>
+          <p>The model processes each image through a pretrained Vision Transformer and a CNN branch, then fuses their class scores. The recorded dataset run contains 5,995 images: 4,076 for training, 720 for validation, and 1,199 for testing. The training workflow includes a stratified validation split, image augmentation, class-weighted loss, early stopping, and a held-out test evaluation.</p>
+        </div>
+      </section>
+      <section class="case-section">
+        <div><span class="section-number">01 / PIPELINE</span><h2>Prepare, train, evaluate.</h2></div>
+        <div class="case-section-content">
+          <p>Images are converted to RGB, resized and normalized using the checkpoint’s saved preprocessing settings. The app loads the trained weights and returns the three highest-scoring class predictions with their model confidence values.</p>
+          <div class="stack-lines">
+            <div><b>PYTHON</b><span>Training pipeline, image processing and inference</span></div>
+            <div><b>PYTORCH</b><span>Hybrid ViT and CNN model with a learned fusion layer</span></div>
+            <div><b>STREAMLIT</b><span>Hosted image-upload demo for interactive inference</span></div>
+            <div><b>HUGGING FACE HUB</b><span>Private storage for the trained model checkpoint</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="case-section">
+        <div><span class="section-number">02 / INTERPRETATION</span><h2>Scores are estimates.</h2></div>
+        <div class="case-section-content">
+          <p>The confidence shown is the model’s score for a predicted class, not a guarantee that the identification is correct. Results depend on the image and on the classes represented during training.</p>
+          <p>This is an educational classifier only. It does not identify whether a plant is safe to consume or use medicinally, and it is not a substitute for expert identification.</p>
+        </div>
+      </section>
+      <section class="try-section" id="try-it">
+        <p class="eyebrow"><span></span> TRY IT YOURSELF</p>
+        <h2>Upload an image. Explore the predictions.</h2>
+        <p>The hosted app accepts JPG and PNG images and displays its three top class predictions. Your uploaded image is sent to the Streamlit app for inference.</p>
+        <div class="classifier-frame">
+          <iframe title="Medicinal Plant Image Classifier interactive demo" src="https://medicinal-plant-classifier.streamlit.app/?embed=true" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="report-actions">
+          <a href="https://medicinal-plant-classifier.streamlit.app/" target="_blank" rel="noopener noreferrer">Open classifier in a new tab ↗</a>
+          <a href="https://github.com/DhaanushK/Medicinal-Plant-Classification" target="_blank" rel="noopener noreferrer">View project repository ↗</a>
+        </div>
+        <p class="case-caveat">Predictions are experimental. Do not use them to determine whether a plant is safe to eat or use as medicine.</p>
+      </section>
+    </div>
+  </main>
+  <footer class="case-footer">
+    <a href="../../index.html">DHAANUSH K.</a>
+    <a href="../medicinal-plant/index.html">← MEDICINAL PLANT PRICE ANALYSIS</a>
+    <span>MEDICINAL PLANT IMAGE CLASSIFICATION</span>
+    <a href="../../index.html#projects">ALL PROJECTS ↑</a>
+  </footer>
+</body>
+</html>

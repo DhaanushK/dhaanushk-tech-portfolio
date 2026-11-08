@@ -1,0 +1,51 @@
+.wo-demo{margin-top:46px;padding:34px clamp(20px,4vw,42px);background:var(--deep);color:var(--ivory)}
+.wo-demo>.eyebrow,.wo-publication .eyebrow{color:var(--gold)}
+.wo-demo h2,.wo-publication h2{margin:16px 0 10px;font:500 clamp(30px,4vw,44px)/1.03 var(--serif);letter-spacing:-.035em}
+.wo-intro{max-width:720px;color:#f0dfd0;font-size:14px;line-height:1.7}
+.wo-form{margin-top:24px;padding:22px;background:var(--warm);color:var(--graphite)}
+.wo-form-top{display:flex;align-items:end;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid #d9c6b1}
+.wo-form-options{display:flex;gap:10px;flex-wrap:wrap}
+.wo-wine-select{display:grid;gap:7px;font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.wo-wine-select select,.wo-field input{min-height:42px;padding:9px 11px;border:1px solid #d9c6b1;border-radius:0;background:var(--white);color:var(--graphite);font:14px var(--sans)}
+.wo-wine-select select{min-width:180px}
+.wo-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 16px;padding:20px 0}
+.wo-field{display:grid;gap:6px;color:var(--graphite);font:500 12px var(--sans)}
+.wo-field small{margin-left:4px;color:var(--muted);font-weight:400}
+.wo-field input:focus-visible,.wo-wine-select select:focus-visible{outline:3px solid var(--burgundy);outline-offset:2px}
+.wo-form-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-top:17px;border-top:1px solid #d9c6b1}
+.wo-button{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:44px;padding:11px 16px;border:1px solid var(--burgundy);border-radius:0;background:var(--burgundy);color:var(--ivory);font:500 11px var(--mono);text-decoration:none;cursor:pointer;transition:transform 180ms ease,box-shadow 180ms ease}
+.wo-button:hover,.wo-button:focus-visible{transform:translate(-.25rem,-.25rem);box-shadow:.25rem .25rem var(--deep)}
+.wo-button:active{transform:none;box-shadow:none}
+.wo-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wo-button:disabled{cursor:wait;opacity:.7}
+.wo-button--outline{background:transparent;color:var(--burgundy)}
+.wo-status{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.wo-status[data-state="error"]{color:var(--burgundy)}
+.wo-result{margin-top:18px;padding:20px 22px;background:var(--ivory);color:var(--graphite);border-left:3px solid var(--gold)}
+.wo-result[hidden]{display:none}
+.wo-result-label{margin:0;color:var(--burgundy);font:500 10px var(--mono);letter-spacing:.1em}
+.wo-result h3{margin:8px 0 12px;font:500 27px/1.1 var(--serif)}
+.wo-result h3 small{font:400 16px var(--sans);letter-spacing:0;color:var(--muted)}
+.wo-result-meta{display:flex;gap:20px 30px;flex-wrap:wrap;color:var(--muted);font-size:12px}
+.wo-result-meta>span{display:grid;gap:4px}
+.wo-result-meta strong{color:var(--muted);font:500 9px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.wo-result-meta b{color:var(--graphite);font-weight:600}
+.wo-result-explanation{max-width:750px;margin:15px 0 0;color:var(--muted);font-size:12px;line-height:1.65}
+.wo-caveat{margin:16px 0 0;color:#f0dfd0;font-size:11px;line-height:1.65}
+.wo-publication{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;margin-top:22px;padding:24px;border:1px solid #d9c6b1;border-left:3px solid var(--gold)}
+.wo-publication h2{max-width:700px;color:var(--graphite);font-size:clamp(25px,3vw,36px)}
+.wo-publication p:not(.eyebrow){max-width:700px;color:var(--muted);font-size:12px;line-height:1.7}
+.wo-publication .wo-button{white-space:nowrap}
+.wo-button--light{background:var(--ivory);color:var(--burgundy)}
+@media(max-width:760px){.wo-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.wo-publication{grid-template-columns:1fr}}
+@media(max-width:620px){.wo-demo{padding:26px 17px}.wo-form{padding:16px}.wo-form-top{align-items:stretch;flex-direction:column}.wo-form-options{flex-direction:column}.wo-wine-select select{width:100%}.wo-fields{grid-template-columns:1fr;gap:12px}.wo-form-actions{align-items:flex-start;flex-direction:column}.wo-publication{padding:19px}}
+@media(prefers-reduced-motion:reduce){.wo-button{transition:none}}
+.wo-intro{font-size:15px;line-height:1.75}
+.wo-wine-select{font-size:12px}
+.wo-field{font-size:13px}
+.wo-button{font-size:12px}
+.wo-status{font-size:13px}
+.wo-result-meta{font-size:13px}
+.wo-result-explanation{font-size:14px;line-height:1.75}
+.wo-caveat{font-size:12px;line-height:1.75}
+.wo-publication p:not(.eyebrow){font-size:14px;line-height:1.75}

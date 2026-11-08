@@ -1,0 +1,14 @@
+# Netlify Drop staging copy is already duplicated in the repository root
+/netlify-upload/
+
+# Local deployment and environment files
+/.netlify/
+.env
+.env.*
+!.env.example
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

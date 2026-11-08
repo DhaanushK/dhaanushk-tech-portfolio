@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">IT Asset Management sample analysis</title>
+  <desc id="desc">The documented sample contains 450 assets: 300 hardware assets and 150 software licenses. Analysis identified 73 expired licenses, 23 over-assigned licenses, and 95 hardware end-of-life candidates.</desc>
+  <rect width="1200" height="800" fill="#3B101C"/>
+  <path d="M0 0h1200v17H0z" fill="#C6A15B"/>
+  <text x="64" y="82" fill="#E4CBB1" font-family="monospace" font-size="17" letter-spacing="4">OPERATIONS · SAMPLE INVENTORY</text>
+  <text x="64" y="151" fill="#F8F2E8" font-family="Georgia,serif" font-size="54">IT Asset Management</text>
+  <text x="64" y="209" fill="#C6A15B" font-family="Georgia,serif" font-size="48" font-style="italic">Lifecycle, compliance, value</text>
+
+  <text x="64" y="380" fill="#F8F2E8" font-family="Georgia,serif" font-size="150" letter-spacing="-7">450</text>
+  <text x="70" y="425" fill="#E4CBB1" font-family="monospace" font-size="16" letter-spacing="3">TOTAL ASSETS IN SAMPLE</text>
+  <path d="M495 284v175" stroke="#70434B" stroke-width="2"/>
+  <text x="545" y="330" fill="#C6A15B" font-family="Georgia,serif" font-size="58">300</text>
+  <text x="680" y="329" fill="#F8F2E8" font-family="Arial,sans-serif" font-size="24">Hardware assets</text>
+  <path d="M545 354h575" stroke="#70434B" stroke-width="2"/>
+  <text x="545" y="424" fill="#C6A15B" font-family="Georgia,serif" font-size="58">150</text>
+  <text x="680" y="423" fill="#F8F2E8" font-family="Arial,sans-serif" font-size="24">Software licenses</text>
+
+  <path d="M64 505h1072" stroke="#70434B" stroke-width="2"/>
+  <text x="64" y="555" fill="#E4CBB1" font-family="monospace" font-size="14" letter-spacing="3">DOCUMENTED PROJECT FINDINGS</text>
+  <path d="M415 584v135M785 584v135" stroke="#70434B" stroke-width="2"/>
+  <text x="64" y="651" fill="#F8F2E8" font-family="Georgia,serif" font-size="64">73</text>
+  <text x="64" y="689" fill="#E4CBB1" font-family="Arial,sans-serif" font-size="19">Expired licenses</text>
+  <text x="455" y="651" fill="#F8F2E8" font-family="Georgia,serif" font-size="64">23</text>
+  <text x="455" y="689" fill="#E4CBB1" font-family="Arial,sans-serif" font-size="19">Over-assigned licenses</text>
+  <text x="825" y="651" fill="#F8F2E8" font-family="Georgia,serif" font-size="64">95</text>
+  <text x="825" y="689" fill="#E4CBB1" font-family="Arial,sans-serif" font-size="19">Hardware end-of-life candidates</text>
+  <text x="64" y="765" fill="#E4CBB1" font-family="monospace" font-size="13" letter-spacing="1">SAMPLE DATASET · REFERENCE DATE 25 AUGUST 2026</text>
+</svg>

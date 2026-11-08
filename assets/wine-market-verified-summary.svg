@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Wine Market Analysis summary</title>
+  <desc id="desc">The deduplicated wine review dataset contains 97,851 records. There are 89,131 records with valid listed prices, an average listed price of 33 dollars and 66 cents, and an average critic rating of 87.96 across 48 countries and 632 varieties.</desc>
+  <rect width="1200" height="800" fill="#F4EBDD"/>
+  <path d="M0 0h1200v17H0z" fill="#5B1728"/>
+  <text x="64" y="82" fill="#812B3B" font-family="monospace" font-size="17" letter-spacing="4">GLOBAL REVIEW DATA · DESCRIPTIVE ANALYSIS</text>
+  <text x="64" y="154" fill="#242124" font-family="Georgia,serif" font-size="58">Wine Market Analysis</text>
+  <text x="64" y="205" fill="#5B1728" font-family="Georgia,serif" font-size="34" font-style="italic">Price, region and grape variety</text>
+
+  <text x="64" y="399" fill="#5B1728" font-family="Georgia,serif" font-size="158" letter-spacing="-8">97,851</text>
+  <text x="72" y="446" fill="#655B5C" font-family="monospace" font-size="16" letter-spacing="3">FINAL DEDUPLICATED REVIEW RECORDS</text>
+  <text x="1136" y="360" text-anchor="end" fill="#812B3B" font-family="Georgia,serif" font-size="43">48 countries</text>
+  <text x="1136" y="410" text-anchor="end" fill="#655B5C" font-family="Arial,sans-serif" font-size="22">632 wine varieties</text>
+  <text x="1136" y="449" text-anchor="end" fill="#655B5C" font-family="Arial,sans-serif" font-size="22">14,795 wineries</text>
+
+  <path d="M64 510h1072" stroke="#D9C6B1" stroke-width="2"/>
+  <text x="64" y="558" fill="#812B3B" font-family="monospace" font-size="14" letter-spacing="3">ANALYTICAL SNAPSHOT</text>
+  <path d="M415 585v132M785 585v132" stroke="#D9C6B1" stroke-width="2"/>
+  <text x="64" y="647" fill="#242124" font-family="Georgia,serif" font-size="54">89,131</text>
+  <text x="64" y="684" fill="#655B5C" font-family="Arial,sans-serif" font-size="19">Records with valid prices</text>
+  <text x="455" y="647" fill="#242124" font-family="Georgia,serif" font-size="54">$33.66</text>
+  <text x="455" y="684" fill="#655B5C" font-family="Arial,sans-serif" font-size="19">Average listed price</text>
+  <text x="825" y="647" fill="#242124" font-family="Georgia,serif" font-size="54">87.96</text>
+  <text x="825" y="684" fill="#655B5C" font-family="Arial,sans-serif" font-size="19">Average critic rating</text>
+  <text x="64" y="765" fill="#655B5C" font-family="monospace" font-size="13" letter-spacing="1">WINE ENTHUSIAST REVIEWS · PRICE AND RATING SUMMARIES USE AVAILABLE RECORDS</text>
+</svg>
